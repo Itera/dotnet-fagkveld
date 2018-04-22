@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +29,20 @@ namespace API.Integrationtests
 
             Assert.Equal("value1", items[0]);
             Assert.Equal("value2", items[1]);
+        }
+
+        [Fact]
+        public async Task Should_Support_Content_Negotiation_Xml()
+        {
+            var response = await _server
+                .CreateRequest("/api/values")
+                .AddHeader("Accept", "application/xml")
+                .GetAsync();
+
+            response.EnsureSuccessStatusCode();
+
+            Assert.Equal("application/xml", response.Content.Headers.ContentType.MediaType);
+            Assert.Equal("utf-8", response.Content.Headers.ContentType.CharSet);
         }
     }
 }

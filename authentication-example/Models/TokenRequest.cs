@@ -1,4 +1,4 @@
-namespace authentication_example.Models
+namespace AuthenticationExample.Models
 {
     public class TokenRequest
     {

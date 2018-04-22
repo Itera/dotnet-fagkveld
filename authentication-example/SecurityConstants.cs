@@ -1,5 +1,5 @@
 
-namespace authentication_example
+namespace AuthenticationExample
 {
     public static class SecurityConstants
     {

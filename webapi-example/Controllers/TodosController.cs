@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace webapi_example.Controllers
+namespace WebApiExample.Controllers
 {
     public class Todo
     {

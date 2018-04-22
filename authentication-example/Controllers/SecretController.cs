@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
-namespace authentication_example.Controllers
+namespace AuthenticationExample.Controllers
 {
     [Route("api/secrets")]
     [Authorize]
